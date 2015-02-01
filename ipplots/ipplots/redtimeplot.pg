@@ -1,0 +1,11 @@
+reset
+set terminal png
+
+set xlabel "Time"
+
+set ylabel "No. of packets dropped/sent"
+
+set title "NEWRED: Time vs No. of packets dropped vs No. of packets sent"
+set style data linespoints
+plot "redtime.txt" using 1:5 with lines title "Packets sent", \
+"" using 1:8 with lines title "Packets dropped"

@@ -1,0 +1,11 @@
+reset
+set terminal png
+
+set xlabel "No. of packets dropped"
+
+set ylabel "Average queue length"
+
+set title "WARED: No. of packets dropped vs Average Queue Length"
+set style data linespoints
+plot "waredstats.txt" using 2:1 with lines title "High priority packets", \
+"" using 3:1 with lines title "Low priority packets"
